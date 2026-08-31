@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  input, textarea, [contenteditable="true"], pre, code {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #050505;
+    color: #d6d3d1; /* stone-300 */
+    overflow: hidden;
+  }
+
+  code, pre, kbd {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  .font-serif-display {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+}
+
+/* Custom Webkit Scrollbars for Sophisticated Dark OS */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Sophisticated Dark Glassmorphism and OS effects */
+.os-bg-radial {
+  background-color: #050505;
+  background-image: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #050505 80%);
+}
+
+.os-glass {
+  background: rgba(12, 12, 12, 0.88);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.os-glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.os-window-shadow {
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.os-window-shadow-active {
+  box-shadow: 0 45px 90px -15px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 30px -5px rgba(255, 255, 255, 0.05);
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Calculator & OS Keypads */
+.btn-num {
+  @apply bg-stone-900/90 hover:bg-stone-800 active:scale-95 text-stone-100 font-semibold text-sm rounded-xl transition-all border border-white/5 flex items-center justify-center p-3 shadow-sm;
+}
+.btn-op {
+  @apply bg-stone-800/70 hover:bg-stone-700 active:scale-95 text-stone-200 font-semibold text-sm rounded-xl transition-all border border-white/10 flex items-center justify-center p-3 shadow-sm;
+}
+.btn-sci {
+  @apply bg-stone-900/50 hover:bg-stone-800 active:scale-95 text-stone-300 font-medium text-xs rounded-xl transition-all border border-white/5 flex items-center justify-center p-2;
+}
+.btn-equals {
+  @apply bg-stone-100 hover:bg-white active:scale-95 text-black font-bold text-base rounded-xl transition-all flex items-center justify-center p-3 shadow-lg shadow-white/10;
+}
+
+
+

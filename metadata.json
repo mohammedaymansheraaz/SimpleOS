@@ -1,0 +1,6 @@
+{
+  "name": "SimpleOS",
+  "description": "SimpleOS is a privacy-focused, fast, and simple operating system with window management, virtual storage persistence, and core utility applications.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
